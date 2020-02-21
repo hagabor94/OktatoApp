@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OktatoApp</string>
+    <string name="jatek">Játék</string>
+    <string name="beallitasok">Beállítások</string>
+    <string name="kilepes">Kilépés</string>
+    <string name="kerdes">Kérdés</string>
+    <string name="segitseg">Segítség</string>
+</resources>
