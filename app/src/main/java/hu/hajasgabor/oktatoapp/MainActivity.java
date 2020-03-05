@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, hu.hajasgabor.oktatoapp.QuizActivity.class);
                 startActivity(intent);
-                MainActivity.this.finish();
+                //MainActivity.this.finish();
             }
         });
     }
