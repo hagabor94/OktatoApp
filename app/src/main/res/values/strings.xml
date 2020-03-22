@@ -6,4 +6,18 @@
     <string name="kerdes">Kérdés</string>
     <string name="segitseg">Segítség</string>
     <string name="tovabb">Tovább</string>
+    <string name="pontszam">Pontszám:</string>
+    <string name="belepes">Belépés</string>
+    <string name="felhasznalonev">Felhasználónév</string>
+    <string name="jelszo">Jelszó</string>
+    <string name="regi_jelszo">Régi jelszó</string>
+    <string name="jelszo_megvaltoztatasa">Jelszó megváltoztatása</string>
+    <string name="uj_jelsz_m_gegyszer">Új jelszó mégegyszer</string>
+    <string name="gyermekek">Gyermekek</string>
+    <string name="tanul_k">Tanulók</string>
+    <string-array name="loginChoices_array">
+        <item>Tanuló vagyok!</item>
+        <item>Szülő vagyok!</item>
+        <item>Tanár vagyok!</item>
+    </string-array>
 </resources>

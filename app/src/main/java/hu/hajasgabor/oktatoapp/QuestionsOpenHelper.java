@@ -18,9 +18,6 @@ import static hu.hajasgabor.oktatoapp.QuestionsContract.SQL_CREATE_TABLE;
 import static hu.hajasgabor.oktatoapp.QuestionsContract.SQL_DROP_TABLE;
 
 public class QuestionsOpenHelper extends SQLiteOpenHelper {
-
-    //ez akkor ha én akarom létrehozni
-    // public static final String DB_NAME = "QuestionsDatabase.db";
     public static final String DB_NAME = "QuestionsDB.db";
     public static final int DB_VERSION = 1;
     private final File DB_FILE;
