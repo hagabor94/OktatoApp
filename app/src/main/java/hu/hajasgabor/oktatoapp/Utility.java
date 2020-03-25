@@ -1,8 +1,6 @@
 package hu.hajasgabor.oktatoapp;
 
-import android.content.Intent;
 import android.util.Base64;
-
 import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;

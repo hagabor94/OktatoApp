@@ -8,7 +8,7 @@
     tools:context=".ParentMainActivity">
 
     <Button
-        android:id="@+id/btnStart"
+        android:id="@+id/btnChildren"
         android:background="@drawable/rounded_button_yellow"
         app:fontFamily="@font/margarine"
         android:layout_width="0dp"
@@ -34,6 +34,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+        app:layout_constraintTop_toBottomOf="@+id/btnChildren" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

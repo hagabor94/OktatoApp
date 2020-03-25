@@ -29,6 +29,9 @@ public class TeacherMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(TeacherMainActivity.this, TeacherListPupilsActivity.class);
+                intent.putExtra("username",loggedInUser);
+                startActivity(intent);
             }
         });
 

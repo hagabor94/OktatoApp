@@ -17,9 +17,9 @@ public class ParentMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pupil_main);
+        setContentView(R.layout.activity_parent_main);
 
-        btnChildren = findViewById(R.id.btnStart);
+        btnChildren = findViewById(R.id.btnChildren);
         btnOptions = findViewById(R.id.btnOptions);
         Intent intentUser = getIntent();
         loggedInUser = intentUser.getStringExtra("username");
@@ -29,7 +29,9 @@ public class ParentMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                Intent intent = new Intent(ParentMainActivity.this,ParentListChildrenActivity.class);
+                intent.putExtra("username",loggedInUser);
+                startActivity(intent);
             }
         });
         btnOptions.setOnClickListener(new View.OnClickListener() {

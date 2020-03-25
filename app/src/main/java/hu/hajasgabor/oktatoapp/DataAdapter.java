@@ -57,9 +57,9 @@ public class DataAdapter {
         }
     }
 
-    public Cursor getParentsData() {
+    public Cursor getPupilsDataForParents(String username) {
         try {
-            String sql = "SELECT * FROM parents";
+            String sql = "SELECT pupils.name, pupils.solved_tests, pupils.avg_points FROM pupils INNER JOIN parents WHERE pupils.parent = parent._id AND (SELECT _id FROM parents WHERE username = '" + username + "') = pupils.parent";
             Cursor mCur = mDb.rawQuery(sql, null);
             if (mCur != null) {
                 mCur.moveToNext();
@@ -70,35 +70,9 @@ public class DataAdapter {
         }
     }
 
-    public Cursor getPupilsData() {
+    public Cursor getPupilsDataForTeachers(String username) {
         try {
-            String sql = "SELECT * FROM pupils";
-            Cursor mCur = mDb.rawQuery(sql, null);
-            if (mCur != null) {
-                mCur.moveToNext();
-            }
-            return mCur;
-        } catch (SQLException mSQLException) {
-            throw mSQLException;
-        }
-    }
-
-    public Cursor getTeachersData() {
-        try {
-            String sql = "SELECT * FROM teachers";
-            Cursor mCur = mDb.rawQuery(sql, null);
-            if (mCur != null) {
-                mCur.moveToNext();
-            }
-            return mCur;
-        } catch (SQLException mSQLException) {
-            throw mSQLException;
-        }
-    }
-
-    public Cursor getTeacherPupilData() {
-        try {
-            String sql = "SELECT * FROM teacher_pupil";
+            String sql = "SELECT pupils.name, pupils.solved_tests, pupils.avg_points, parents.name AS parent_name FROM pupils INNER JOIN parents INNER JOIN teachers INNER JOIN teacher_pupil ON pupils.parent = parents._id AND  teacher_pupil.pupil_id = pupils._id AND teacher_pupil.teacher_id = teachers._id and teachers.username = '"+username+"'";
             Cursor mCur = mDb.rawQuery(sql, null);
             if (mCur != null) {
                 mCur.moveToNext();

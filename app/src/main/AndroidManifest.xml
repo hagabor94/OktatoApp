@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TeacherMainActivity"></activity>
+        <activity android:name=".TeacherListPupilsActivity"></activity>
+        <activity android:name=".ParentListChildrenActivity" />
+        <activity android:name=".TeacherMainActivity" />
         <activity android:name=".OptionsActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
@@ -21,7 +23,7 @@
         <activity android:name=".QuizResultActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".PupilMainActivity" />
-        <activity android:name=".ParentMainActivity"></activity>
+        <activity android:name=".ParentMainActivity" />
     </application>
 
 </manifest>
