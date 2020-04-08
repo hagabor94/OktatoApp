@@ -19,17 +19,23 @@ public class ParentListChildrenActivity extends AppCompatActivity {
     List<Pupil> pupils = new ArrayList<>();
     Cursor children;
     String parent;
+    UsernameRoleTheme data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        data = Utility.GetUsernameRoleTheme(this);
+        if(data.isDarktheme())
+            setTheme(R.style.DarkTheme);
+        else
+            setTheme(R.style.LightTheme);
         setContentView(R.layout.activity_parent_list_children);
 
         horScroll = findViewById(R.id.horizontalscroll);
         listView = findViewById(R.id.ListViewPupilParent);
 
-        Intent getUsername = getIntent();
-        parent=getUsername.getStringExtra("username");
+        //Intent getUsername = getIntent();
+        parent=data.getUsername();//getUsername.getStringExtra("username");
 
         Context mContext = this;
         final DataAdapter mDbHelper = new DataAdapter(mContext);

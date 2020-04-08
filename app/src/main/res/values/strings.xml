@@ -15,6 +15,13 @@
     <string name="uj_jelsz_m_gegyszer">Új jelszó mégegyszer</string>
     <string name="gyermekek">Gyermekek</string>
     <string name="tanul_k">Tanulók</string>
+    <string name="uj_jelsz">Új jelszó</string>
+    <string name="friss_t_s">Frissítés</string>
+    <string name="kitoltott">Kitöltött tesztek száma: </string>
+    <string name="tesztek_atlagpontsz_ma">Tesztek átlagpontszáma: </string>
+    <string name="szulo_neve">Szülő neve: </string>
+    <string name="tema_ment_se_s_kil_p_s">Téma mentése és kilépés</string>
+    <string name="kijelentkez_s">Kijelentkezés</string>
     <string-array name="loginChoices_array">
         <item>Tanuló vagyok!</item>
         <item>Szülő vagyok!</item>

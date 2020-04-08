@@ -59,7 +59,7 @@ public class DataAdapter {
 
     public Cursor getPupilsDataForParents(String username) {
         try {
-            String sql = "SELECT pupils.name, pupils.solved_tests, pupils.avg_points FROM pupils INNER JOIN parents WHERE pupils.parent = parent._id AND (SELECT _id FROM parents WHERE username = '" + username + "') = pupils.parent";
+            String sql = "SELECT pupils.name, pupils.solved_tests, pupils.avg_points FROM pupils INNER JOIN parents WHERE pupils.parent = parents._id AND (SELECT _id FROM parents WHERE username = '" + username + "') = pupils.parent";
             Cursor mCur = mDb.rawQuery(sql, null);
             if (mCur != null) {
                 mCur.moveToNext();
@@ -101,8 +101,7 @@ public class DataAdapter {
         int solvedTests = pupil.getInt(pupil.getColumnIndexOrThrow("solved_tests"));
         float avgPoints = pupil.getFloat(pupil.getColumnIndexOrThrow("avg_points"));
 
-        solvedTests++;
-        avgPoints = (avgPoints + (float) points) / (float) solvedTests;
+        avgPoints = (avgPoints * solvedTests + (float)points) / (float)++solvedTests;
 
         ContentValues cv = new ContentValues();
         cv.put("solved_tests", solvedTests);

@@ -20,15 +20,21 @@ public class QuizResultActivity extends AppCompatActivity {
     String username;
     int solvedTests;
     float avgPoints;
+    UsernameRoleTheme data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        data = Utility.GetUsernameRoleTheme(this);
+        if(data.isDarktheme())
+            setTheme(R.style.DarkTheme);
+        else
+            setTheme(R.style.LightTheme);
         setContentView(R.layout.activity_quiz_result);
 
         Intent intent2 = getIntent();
         points = intent2.getIntExtra("points", 0);
-        username = intent2.getStringExtra("username");
+        username = data.getUsername();//intent2.getStringExtra("username");
 
         txtQuizResult = findViewById(R.id.txtQuizResult);
         txtAvgPoints = findViewById(R.id.txt_avgPoints);

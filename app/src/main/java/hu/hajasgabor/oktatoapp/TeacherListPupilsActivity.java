@@ -19,17 +19,23 @@ public class TeacherListPupilsActivity extends AppCompatActivity {
     List<PupilForTeacher> pupilsList = new ArrayList<>();
     Cursor pupils;
     String teacher;
+    UsernameRoleTheme data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        data = Utility.GetUsernameRoleTheme(this);
+        if(data.isDarktheme())
+            setTheme(R.style.DarkTheme);
+        else
+            setTheme(R.style.LightTheme);
         setContentView(R.layout.activity_teacher_list_pupils);
 
         horScroll = findViewById(R.id.horizontalscroll);
         listView = findViewById(R.id.ListViewPupilTeacher);
 
-        Intent getUsername = getIntent();
-        teacher = getUsername.getStringExtra("username");
+        //Intent getUsername = getIntent();
+        teacher = data.getUsername(); //getUsername.getStringExtra("username");
 
         Context mContext = this;
         final DataAdapter mDbHelper = new DataAdapter(mContext);

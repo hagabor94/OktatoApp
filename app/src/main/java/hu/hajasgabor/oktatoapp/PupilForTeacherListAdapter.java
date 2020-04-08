@@ -14,10 +14,12 @@ public class PupilForTeacherListAdapter extends BaseAdapter {
 
     List<PupilForTeacher> pupils;
     Context context;
+    private String theme;
 
     public PupilForTeacherListAdapter(List<PupilForTeacher> pupils, Context context) {
         this.pupils = pupils;
         this.context = context;
+        theme = Utility.GetThemeName(context);
     }
 
     @Override
@@ -39,7 +41,10 @@ public class PupilForTeacherListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup teacher) {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.list_item_pupil_for_teacher, teacher, false);
+            if (theme.equals("DarkTheme"))
+                convertView = inflater.inflate(R.layout.list_item_pupil_for_teacher_dark, teacher, false);
+            else
+                convertView = inflater.inflate(R.layout.list_item_pupil_for_teacher_light, teacher, false);
         }
 
         TextView name = convertView.findViewById(R.id.txt_list_name);

@@ -14,8 +14,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/margarine"
-        android:text="TextView"
         android:textColor="@color/blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,9 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Kitöltött tesztek száma: "
+        android:text="@string/kitoltott"
         android:textColor="@color/purple"
-        android:fontFamily="@font/margarine"
         app:layout_constraintBottom_toBottomOf="@+id/txt_list_solved"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -39,9 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:fontFamily="@font/margarine"
-        android:text="TextView"
         android:textColor="@color/blue"
+        android:gravity="bottom"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -53,9 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Tesztek átlagpontszáma: "
+        android:text="@string/tesztek_atlagpontsz_ma"
         android:textColor="@color/purple"
-        android:fontFamily="@font/margarine"
         app:layout_constraintBottom_toBottomOf="@+id/txt_list_solved"
         app:layout_constraintStart_toEndOf="@+id/txt_list_solved" />
 
@@ -64,11 +59,31 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
-        android:text="TextView"
         android:textColor="@color/blue"
-        android:fontFamily="@font/margarine"
+        android:gravity="bottom"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/szulo_neve"
+        android:textColor="@color/purple"
+        app:layout_constraintTop_toBottomOf="@+id/txt_list_solved"
+        app:layout_constraintStart_toStartOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/txt_list_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/blue"
+        android:foregroundGravity="bottom"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/textView9"
+        app:layout_constraintBottom_toBottomOf="@id/textView9"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

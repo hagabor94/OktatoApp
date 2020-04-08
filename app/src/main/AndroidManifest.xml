@@ -8,8 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".TeacherListPupilsActivity"></activity>
+        android:theme="@style/DarkTheme">
+        <activity android:name=".TeacherListPupilsActivity" />
         <activity android:name=".ParentListChildrenActivity" />
         <activity android:name=".TeacherMainActivity" />
         <activity android:name=".OptionsActivity" />

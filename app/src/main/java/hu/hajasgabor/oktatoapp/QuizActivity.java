@@ -31,6 +31,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     int questionCounter = 0;
     int points = 0;
     String username;
+    UsernameRoleTheme uNRT;
 
     private void fillActivity(Cursor data, int questionId) {
         data.moveToPosition(questionId);
@@ -40,7 +41,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         btnAnswer1.setText(data.getString(answers.get(0)));
         btnAnswer2.setText(data.getString(answers.get(1)));
         btnAnswer3.setText(data.getString(answers.get(2)));
-        btnAnswer4.setText(data.getString(answers.get(3)));  //EZ MÉG NINCS TESZTELVE
+        btnAnswer4.setText(data.getString(answers.get(3)));
         txtHint.setText(data.getString(6));
 
         btnAnswer1.setEnabled(true);
@@ -60,7 +61,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             if (currentQuestion == questionsSequence.get(questionsSequence.size() - 1)) {
                 Intent intent = new Intent(QuizActivity.this, QuizResultActivity.class);
                 intent.putExtra("points", points);
-                intent.putExtra("username",username);
                 startActivity(intent);
                 QuizActivity.this.finish();
             } else {
@@ -79,6 +79,11 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        uNRT = Utility.GetUsernameRoleTheme(this);
+        if(uNRT.isDarktheme())
+            setTheme(R.style.DarkTheme);
+        else
+            setTheme(R.style.LightTheme);
         setContentView(R.layout.activity_quiz);
 
         txtQuestion = findViewById(R.id.txtQuestion);
@@ -94,8 +99,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         btnAnswer4.setOnClickListener(this);
         btnNext.setOnClickListener(this);
 
-        Intent getUsername = getIntent();
-        username = getUsername.getStringExtra("username");
+        //Intent getUsername = getIntent();
+        username = uNRT.getUsername(); //getUsername.getStringExtra("username");
 
         Context mContext = this;
         final DataAdapter mDbHelper = new DataAdapter(mContext);
@@ -106,8 +111,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         questionsSequence = Utility.RandomQuizQuestions(mData.getCount());
         currentQuestion = questionsSequence.get(questionCounter);
         fillActivity(mData, currentQuestion);
-
-
     }
 
     @Override
