@@ -8,4 +8,8 @@
     <color name="yellow"> #ffd100</color>
     <color name="darkyellow">#cca700 </color>
     <color name="orange">#ff9700</color>
+    <color name="transparentwhite">#88ffffff</color>
+    <color name="transparentgreen">#8800FF00</color>
+    <color name="transparentred">#88FF0000</color>
+    <color name="transparent">#00000000</color>
 </resources>

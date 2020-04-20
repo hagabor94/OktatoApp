@@ -36,9 +36,12 @@ public class PupilMainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PupilMainActivity.this, hu.hajasgabor.oktatoapp.QuizActivity.class);
+                /*Intent intent = new Intent(PupilMainActivity.this, hu.hajasgabor.oktatoapp.QuizActivity.class);
                 //intent.putExtra("username",loggedInUser);
-                startActivity(intent);
+                startActivity(intent);*/
+
+                Intent intent2 = new Intent(PupilMainActivity.this, GameChooserActivity.class);
+                startActivity(intent2);
 
             }
         });

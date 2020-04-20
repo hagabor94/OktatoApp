@@ -57,6 +57,19 @@ public class DataAdapter {
         }
     }
 
+    public Cursor getMatchData(){
+        try{
+            String sql = "SELECT * FROM matchdata";
+            Cursor mCur = mDb.rawQuery(sql,null);
+            if(mCur != null){
+                mCur.moveToNext();
+            }
+            return mCur;
+        }catch (SQLException mSQLException){
+            throw mSQLException;
+        }
+    }
+
     public Cursor getPupilsDataForParents(String username) {
         try {
             String sql = "SELECT pupils.name, pupils.solved_tests, pupils.avg_points FROM pupils INNER JOIN parents WHERE pupils.parent = parents._id AND (SELECT _id FROM parents WHERE username = '" + username + "') = pupils.parent";

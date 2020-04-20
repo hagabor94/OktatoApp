@@ -16,6 +16,7 @@
         <item name="android:textColor">@color/yellow</item>
         <item name="android:editTextColor">@color/yellow</item>
         <item name="android:buttonStyle">@style/ButtonStyleForDark</item>
+        <item name="android:radioButtonStyle">@style/RadioStyleForDark</item>
         <item name="fontFamily">@font/margarine</item>
         <item name="font">@font/margarine</item>
         <item name="android:windowBackground">@drawable/gradient</item>
@@ -30,6 +31,7 @@
         <item name="android:textColor">@color/blue</item>
         <item name="android:editTextColor">@color/blue</item>
         <item name="android:buttonStyle">@style/ButtonStyleForLight</item>
+        <item name="android:radioButtonStyle">@style/RadioStyleForLight</item>
         <item name="fontFamily">@font/margarine</item>
         <item name="font">@font/margarine</item>
         <item name="android:windowBackground">@drawable/gradient_yellow</item>
@@ -59,6 +61,14 @@
         <item name="android:popupBackground">@drawable/spinner_for_light</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="RadioStyleForDark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name = "android:textColor">@color/yellow</item>
+    </style>
+
+    <style name="RadioStyleForLight" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name = "android:textColor">@color/blue</item>
     </style>
 
 </resources>

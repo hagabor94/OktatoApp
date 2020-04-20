@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/DarkTheme">
+        <activity android:name=".GameChooserActivity"></activity>
+        <activity android:name=".MatchResultActivity" />
+        <activity android:name=".MatchActivity" />
         <activity android:name=".TeacherListPupilsActivity" />
         <activity android:name=".ParentListChildrenActivity" />
         <activity android:name=".TeacherMainActivity" />

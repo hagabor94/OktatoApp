@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchActivity">
+
+    <TextView
+        android:id="@+id/txt_objective"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="@string/parositsd"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_below="@id/txt_objective"
+        android:background="@drawable/match_border"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_event1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="Event1" />
+
+        <TextView
+            android:id="@+id/txt_date1_placeholder"
+            android:layout_width="wrap_content"
+            android:minWidth="64dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="12dp"
+            android:paddingStart="12dp"
+            android:background="@color/transparentwhite"
+            android:tag="EMPTY"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_1"
+        android:padding="8dp"
+        android:background="@drawable/match_border"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_event2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="Event2"
+            />
+
+        <TextView
+            android:id="@+id/txt_date2_placeholder"
+            android:layout_width="wrap_content"
+            android:minWidth="64dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="12dp"
+            android:paddingStart="12dp"
+            android:background="@color/transparentwhite"
+            android:tag="EMPTY"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_below="@id/layout_2"
+        android:background="@drawable/match_border"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_event3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Event3"
+            android:padding="4dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_date3_placeholder"
+            android:layout_width="wrap_content"
+            android:minWidth="64dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="12dp"
+            android:paddingStart="12dp"
+            android:background="@color/transparentwhite"
+            android:tag="EMPTY"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_below="@id/layout_3"
+        android:background="@drawable/match_border"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_event4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="Event4"
+            />
+
+        <TextView
+            android:id="@+id/txt_date4_placeholder"
+            android:layout_width="wrap_content"
+            android:minWidth="64dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="12dp"
+            android:paddingStart="12dp"
+            android:background="@color/transparentwhite"
+            android:tag="EMPTY"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_checkAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="32dp"
+        android:text="@string/ellen_rz_s"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_checkAnswer"
+        android:orientation="horizontal"
+        android:background="@drawable/match_border"
+        android:layout_margin="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_date1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Időpont"
+            />
+
+        <TextView
+            android:id="@+id/txt_date2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Date2"
+            />
+
+        <TextView
+            android:id="@+id/txt_date3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Date3"
+             />
+
+        <TextView
+            android:id="@+id/txt_date4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Date4"
+            />
+    </LinearLayout>
+</RelativeLayout>

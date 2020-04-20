@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OptionsActivity"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    android:focusableInTouchMode="true">
 
     <TextView
         android:id="@+id/textView"
@@ -117,6 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:padding="4dp"
         android:text="@string/tema_ment_se_s_kil_p_s"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />

@@ -25,7 +25,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     boolean correct = false;
     boolean firstTry = true;
     Cursor mData;
-    List<Integer> answers = new ArrayList<Integer>();
+    List<Integer> answers = new ArrayList<>();
     List<Integer> questionsSequence = new ArrayList<>();
     int currentQuestion;
     int questionCounter = 0;

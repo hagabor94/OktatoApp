@@ -22,6 +22,11 @@
     <string name="szulo_neve">Szülő neve: </string>
     <string name="tema_ment_se_s_kil_p_s">Téma mentése és kilépés</string>
     <string name="kijelentkez_s">Kijelentkezés</string>
+    <string name="ellen_rz_s">Ellenőrzés</string>
+    <string name="parositsd">Párosítsd össze az eseményeket a hozzájuk tartozó évszámokkal!</string>
+    <string name="v_lassz_j_t_km_dot">Válassz játékmódot!</string>
+    <string name="kv_z">Kvíz</string>
+    <string name="p_ros_t">Párosító</string>
     <string-array name="loginChoices_array">
         <item>Tanuló vagyok!</item>
         <item>Szülő vagyok!</item>
